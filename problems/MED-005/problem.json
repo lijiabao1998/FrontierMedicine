@@ -1,0 +1,27 @@
+{
+  "id": "MED-005",
+  "domain": "medicine",
+  "title": "Surrogate endpoints / external controls 的有效性",
+  "status": "OPEN",
+  "priority": "B",
+  "checked_on": "2026-09-28",
+  "statement": "AI選出的surrogate endpoint或external comparator何時能支持trial decision，而不因prognostic association或confounding誤導treatment effect。",
+  "known_result": "2026 AI-enabled clinical trials review強調surrogates需要trial-level treatment-effect capture，external controls/digital twins需要fit-for-purpose validation。",
+  "open_gap": "transportability、unmeasured confounding、surrogate paradox、treatment-specific validity與data harmonization。",
+  "first_task": "用synthetic RCTs建立一個強prognostic但無surrogate validity的負例，再測trial-level meta-analytic validation指標。",
+  "evaluator": "treatment-effect association、bias/coverage、sensitivity to unmeasured confounding。",
+  "validation_limits": "個體層prediction高不能證surrogate有效；external control不是randomized arm。",
+  "completion_criterion": "在多trials/treatments下預先指定surrogate/control方法保持effect-estimation validity並通過敏感性分析。",
+  "screening_note": "2026-09-28 初始有界文獻篩查。本庫只做研究方法、公開/去識別資料與simulation，不提供個人診療或自動臨床決策。每輪重查最新指南、驗證研究與修訂。",
+  "screening_queries": [
+    "AI enabled clinical trials surrogate endpoints external controls 2026"
+  ],
+  "sources": [
+    {
+      "title": "AI-enabled clinical trials",
+      "url": "https://www.nature.com/articles/s44222-026-00487-7",
+      "kind": "review",
+      "supports": "surrogate endpoints、external controls、digital twins的fit-for-purpose validation"
+    }
+  ]
+}

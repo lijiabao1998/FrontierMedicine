@@ -1,0 +1,27 @@
+{
+  "id": "MED-006",
+  "domain": "medicine",
+  "title": "Simulation-guided adaptive trials 的 operating characteristics",
+  "status": "OPEN",
+  "priority": "A",
+  "checked_on": "2026-09-28",
+  "statement": "複雜adaptive/master/biomarker-enriched trial在多種真實parameter scenarios下是否維持type-I/FDR control、power與合理decision probabilities。",
+  "known_result": "2026 Nature Reviews Drug Discovery明確將trial simulation用於type I error、FDR、power與adaptive decision operating characteristics。",
+  "open_gap": "simulation scenario completeness、model misspecification、rare subgroups與operational deviations。",
+  "first_task": "建立two-arm group-sequential toy trial，先用解析結果驗simulation；再加入adaptive sample-size rule。",
+  "evaluator": "type-I error、power、expected N、stopping probabilities、Monte Carlo SE。",
+  "validation_limits": "simulation只對所列scenarios有效；不能以一組favorable scenarios證design普遍安全。",
+  "completion_criterion": "在預註冊parameter grid及independent code implementation中維持目標operating characteristics。",
+  "screening_note": "2026-09-28 初始有界文獻篩查。本庫只做研究方法、公開/去識別資料與simulation，不提供個人診療或自動臨床決策。每輪重查最新指南、驗證研究與修訂。",
+  "screening_queries": [
+    "simulation guided clinical trials 2026"
+  ],
+  "sources": [
+    {
+      "title": "Design, simulate, refine: simulation-guided clinical trials for accelerated drug development",
+      "url": "https://www.nature.com/articles/s41573-026-01481-9",
+      "kind": "perspective",
+      "supports": "complex trial simulation與operating-characteristic驗證"
+    }
+  ]
+}

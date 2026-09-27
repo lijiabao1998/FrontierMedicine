@@ -1,0 +1,27 @@
+{
+  "id": "MED-003",
+  "domain": "medicine",
+  "title": "Multimodal medical agents 的 tool-use 安全與可審計性",
+  "status": "OPEN",
+  "priority": "A",
+  "checked_on": "2026-09-28",
+  "statement": "整合text/image/EHR/tools的medical agents如何在tool failure、conflicting modalities與uncertainty下安全abstain、保留trace並避免hallucinated action。",
+  "known_result": "2026 scoping review發現multimodal medical agents多處於prototype/early technical evaluation，safety、fairness、prospective outcome evidence與real-world deployment仍有限。",
+  "open_gap": "tool orchestration、uncertainty propagation、closed-source model drift、human handoff與auditability。",
+  "first_task": "建立非臨床synthetic cases和mock tools，故意回傳conflicting/failed tool outputs；比較free-form agent與rule-gated agent。",
+  "evaluator": "unsafe action rate、abstention、trace completeness、error recovery、calibration。",
+  "validation_limits": "synthetic safety benchmark不等於clinical safety；不得連接真實病人系統或執行clinical action。",
+  "completion_criterion": "在多種mock failures/OOD cases維持低unsafe action與可審計handoff；臨床claim需prospective獨立研究。",
+  "screening_note": "2026-09-28 初始有界文獻篩查。本庫只做研究方法、公開/去識別資料與simulation，不提供個人診療或自動臨床決策。每輪重查最新指南、驗證研究與修訂。",
+  "screening_queries": [
+    "multimodal AI agents healthcare 2026 scoping review"
+  ],
+  "sources": [
+    {
+      "title": "Multimodal artificial intelligence agents in healthcare: a scoping review",
+      "url": "https://www.nature.com/articles/s41746-026-03060-z",
+      "kind": "review",
+      "supports": "multimodal medical agents的成熟度與驗證缺口"
+    }
+  ]
+}

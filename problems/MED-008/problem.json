@@ -1,0 +1,27 @@
+{
+  "id": "MED-008",
+  "domain": "medicine",
+  "title": "Treatment-effect heterogeneity 的可識別性",
+  "status": "OPEN",
+  "priority": "B",
+  "checked_on": "2026-09-28",
+  "statement": "用RCT與觀察資料估個體/亞群treatment-effect heterogeneity時，如何避免prognostic risk被誤認為predictive effect，並維持external validity。",
+  "known_result": "AI-enabled trials與modern clinical evaluation increasingly use prognostic/predictive tools，但treatment-effect capture要求與一般prediction不同。",
+  "open_gap": "low power for interactions、multiplicity、transportability、post-hoc subgrouping與confounding。",
+  "first_task": "用synthetic RCT建立risk-only vs true effect-modification cases；比較outcome prediction與CATE methods。",
+  "evaluator": "CATE calibration、policy value on held-out RCT、interaction coverage、subgroup multiplicity。",
+  "validation_limits": "預測outcome準確不等於預測treatment benefit準確；不輸出個人治療建議。",
+  "completion_criterion": "在獨立randomized/compatible data中預註冊subgroups或CATE method重現treatment interaction。",
+  "screening_note": "2026-09-28 初始有界文獻篩查。本庫只做研究方法、公開/去識別資料與simulation，不提供個人診療或自動臨床決策。每輪重查最新指南、驗證研究與修訂。",
+  "screening_queries": [
+    "AI clinical trials heterogeneous treatment effects 2026"
+  ],
+  "sources": [
+    {
+      "title": "AI-enabled clinical trials",
+      "url": "https://www.nature.com/articles/s44222-026-00487-7",
+      "kind": "review",
+      "supports": "AI prognostic/stratification tools與trial-level validation需求"
+    }
+  ]
+}

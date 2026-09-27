@@ -1,0 +1,27 @@
+{
+  "id": "MED-009",
+  "domain": "medicine",
+  "title": "AI trial matching / site selection 的 transport 與 fairness",
+  "status": "OPEN",
+  "priority": "B",
+  "checked_on": "2026-09-28",
+  "statement": "trial-site/clinician/patient matching模型在不同therapeutic areas、regions與demographic compositions下能否保持recruitment效能與公平性。",
+  "known_result": "2026 Nature Health DocTr以claims、trial text與historical enrolment做clinician matching，並同時最佳化accuracy、demographic fairness與operational efficiency。",
+  "open_gap": "historical-enrolment feedback bias、competition between trials、new disease areas與actual prospective recruitment impact。",
+  "first_task": "用公開/合成matching graph重現ranking baseline，做region/therapeutic-area held-out與demographic audit。",
+  "evaluator": "NDCG/recall、enrolment proxy、group exposure、calibration、operational cost。",
+  "validation_limits": "historical enrolment不是理想ground truth；推薦更準不等於prospective recruitment必然改善。",
+  "completion_criterion": "在held-out trials/regions保持預先設定matching與fairness性能，prospective utility需另驗證。",
+  "screening_note": "2026-09-28 初始有界文獻篩查。本庫只做研究方法、公開/去識別資料與simulation，不提供個人診療或自動臨床決策。每輪重查最新指南、驗證研究與修訂。",
+  "screening_queries": [
+    "AI matching clinicians clinical trials 2026"
+  ],
+  "sources": [
+    {
+      "title": "Matching clinicians with clinical trials using AI",
+      "url": "https://www.nature.com/articles/s44360-026-00073-6",
+      "kind": "primary",
+      "supports": "trial-site/clinician matching、fairness與operational evaluation"
+    }
+  ]
+}

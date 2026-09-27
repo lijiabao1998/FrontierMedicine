@@ -1,0 +1,33 @@
+{
+  "id": "MED-010",
+  "domain": "medicine",
+  "title": "Clinical GenAI 的 validation lifecycle 與 human oversight",
+  "status": "OPEN",
+  "priority": "A",
+  "checked_on": "2026-09-28",
+  "statement": "對生成式AI在醫療中的不同intended uses，建立從technical validation到human-AI workflow、prospective與real-world monitoring的可執行validation contract。",
+  "known_result": "2026 Validation Accords倡議與five-phase framework都指出clinical GenAI需要一致、生命周期式驗證，而不是單一benchmark。",
+  "open_gap": "model updates、hallucination taxonomy、human automation bias、tool use與site-specific workflow effects。",
+  "first_task": "建立非臨床synthetic QA/reporting task，凍結error taxonomy與human-review protocol；模擬model version update。",
+  "evaluator": "critical-error rate、calibration/abstention、review catch rate、workflow time、version drift。",
+  "validation_limits": "benchmark答對不等於clinical safety；human-in-loop不保證能抓到所有錯誤。",
+  "completion_criterion": "對明列intended use有多階段證據與可審計change-control；任何臨床效用claim需prospective study。",
+  "screening_note": "2026-09-28 初始有界文獻篩查。本庫只做研究方法、公開/去識別資料與simulation，不提供個人診療或自動臨床決策。每輪重查最新指南、驗證研究與修訂。",
+  "screening_queries": [
+    "Validation Accords generative AI medicine 2026"
+  ],
+  "sources": [
+    {
+      "title": "Consensus framework for the validation of generative AI: call for collaborators on the Validation Accords",
+      "url": "https://www.nature.com/articles/s41591-026-04647-5",
+      "kind": "correspondence",
+      "supports": "clinical GenAI validation標準化倡議"
+    },
+    {
+      "title": "A five-phase evaluation framework for diagnostic and predictive medical artificial intelligence",
+      "url": "https://www.nature.com/articles/s41746-026-03155-7",
+      "kind": "framework",
+      "supports": "medical AI lifecycle evaluation"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "MED-002",
+  "domain": "medicine",
+  "title": "Temporal drift 與 post-deployment monitoring",
+  "status": "OPEN",
+  "priority": "A",
+  "checked_on": "2026-09-28",
+  "statement": "已部署模型面對population、practice、device、coding與treatment change時，如何早期偵測performance/calibration drift並決定何時重驗。",
+  "known_result": "2026 five-phase medical-AI evaluation framework把real-world integration、monitoring與adaptive designs納入lifecycle，而不以一次retrospective validation結束。",
+  "open_gap": "label delay、silent workflow changes、feedback loops、retraining-induced version drift。",
+  "first_task": "在合成temporal dataset注入prevalence/covariate/concept drift，比較PSI類drift、calibration monitoring與outcome-based alarm。",
+  "evaluator": "detection delay、false alarms、calibration loss、version traceability。",
+  "validation_limits": "covariate drift不必然代表clinical performance變差；label delay使真實監測更難。",
+  "completion_criterion": "對凍結drift families及label delays有可重現early-warning和低false alarm，並保留version provenance。",
+  "screening_note": "2026-09-28 初始有界文獻篩查。本庫只做研究方法、公開/去識別資料與simulation，不提供個人診療或自動臨床決策。每輪重查最新指南、驗證研究與修訂。",
+  "screening_queries": [
+    "medical AI lifecycle monitoring 2026 evaluation framework"
+  ],
+  "sources": [
+    {
+      "title": "A five-phase evaluation framework for diagnostic and predictive medical artificial intelligence",
+      "url": "https://www.nature.com/articles/s41746-026-03155-7",
+      "kind": "framework",
+      "supports": "從technical validation到real-world monitoring的lifecycle"
+    }
+  ]
+}

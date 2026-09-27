@@ -1,0 +1,27 @@
+{
+  "id": "MED-004",
+  "domain": "medicine",
+  "title": "AI biomarker 從 discovery 到 clinical utility",
+  "status": "OPEN",
+  "priority": "A",
+  "checked_on": "2026-09-28",
+  "statement": "AI發現的molecular/imaging/digital biomarker如何通過獨立外驗、mechanistic support、clinical utility與prospective evaluation，而不是停在高維correlation。",
+  "known_result": "2026 biomarker review指出許多AI biomarkers在外部cohort失敗，並提出discovery→validation→clinical utility→therapeutic integration的證據鏈。",
+  "open_gap": "batch/platform drift、small-n-large-p selection bias、mechanistic overinterpretation與incremental value。",
+  "first_task": "用公開低風險dataset做nested feature selection + external split；對比simple clinical baseline，做label permutation負控制。",
+  "evaluator": "calibration、effect stability、incremental net benefit、feature stability、external replication。",
+  "validation_limits": "feature importance不等於causal mechanism；predictive biomarker不自動是surrogate或treatment target。",
+  "completion_criterion": "在獨立cohorts/platforms重現，且在預定decision point帶來超越baseline的clinical utility；mechanistic claim另需相應證據。",
+  "screening_note": "2026-09-28 初始有界文獻篩查。本庫只做研究方法、公開/去識別資料與simulation，不提供個人診療或自動臨床決策。每輪重查最新指南、驗證研究與修訂。",
+  "screening_queries": [
+    "AI biomarker discovery external validation 2026"
+  ],
+  "sources": [
+    {
+      "title": "Artificial intelligence in biomarker discovery for diseases: diagnostic and therapeutic prospects",
+      "url": "https://www.nature.com/articles/s41392-026-02946-4",
+      "kind": "review",
+      "supports": "AI biomarker translation、外部驗證與clinical utility缺口"
+    }
+  ]
+}
