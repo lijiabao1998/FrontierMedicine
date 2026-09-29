@@ -17,4 +17,4 @@
 | MED-009 | AI trial matching / site selection 的transport與fairness | B |
 | MED-010 | Clinical GenAI 的validation lifecycle與human oversight | A |
 
-每輪依治理 f40beb161b6c87201d8082ecbc29c7e0b3eaa402 fresh search。預測準確、clinical validity、clinical utility、regulatory fitness分開；任何clinical deployment、治療建議、濕實驗或病人接觸不在agent自動權限內。
+每輪依治理 9c3ae2dbaa1c814f3ef451c041dedfe3b77d926f fresh search。預測準確、clinical validity、clinical utility、regulatory fitness分開；任何clinical deployment、治療建議、濕實驗或病人接觸不在agent自動權限內。
