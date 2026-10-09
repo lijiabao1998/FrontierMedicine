@@ -1,0 +1,14 @@
+[
+  {
+    "case": "reported_primary_tamper",
+    "rejected": true,
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"problems/MED-001/results/site_shift_v1/independent/verify_medicine.py\", line 49, in <module>\n    check(d.mean(),a['primary_delta_brier']['mean']);check(se,a['primary_delta_brier']['standard_error']);check(ci,a['primary_delta_brier']['interval95'],1e-10)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"problems/MED-001/results/site_shift_v1/independent/verify_medicine.py\", line 13, in check\n    g=float(np.max(np.abs(np.asarray(a)-np.asarray(b)))); gaps.append(g); assert g<=tol,(g,tol)\n                                                                                 ^^^^^^\nAssertionError: (0.1, 1e-10)\n"
+  },
+  {
+    "case": "raw_label_tamper",
+    "rejected": true,
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"problems/MED-001/results/site_shift_v1/independent/verify_medicine.py\", line 31, in <module>\n    for key,val in [('x1',x1),('x2',x2),('observed_x1',scale*x1),('observed_x2',ox2),('missing_x2',missing),('y',yu<truth),('p_true',truth),('fixed_logit',z),('p_fixed',expit(z))]:check(a[key],val)\n                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^\n  File \"problems/MED-001/results/site_shift_v1/independent/verify_medicine.py\", line 13, in check\n    g=float(np.max(np.abs(np.asarray(a)-np.asarray(b)))); gaps.append(g); assert g<=tol,(g,tol)\n                                                                                 ^^^^^^\nAssertionError: (1.0, 1e-10)\n"
+  }
+]
