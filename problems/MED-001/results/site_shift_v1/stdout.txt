@@ -1,0 +1,186 @@
+CONTROL PASS: 8 known/tied/flipped metric checks; 3 intentional corruptions rejected
+101 A_reference: fixed Brier=0.18181229; recalibrated=0.18181830; delta=+0.00000601
+101 B_intercept: fixed Brier=0.26194842; recalibrated=0.18562603; delta=-0.07632240
+101 C_measurement: fixed Brier=0.21798926; recalibrated=0.20362789; delta=-0.01436137
+202 A_reference: fixed Brier=0.19005214; recalibrated=0.19116044; delta=+0.00110830
+202 B_intercept: fixed Brier=0.25956763; recalibrated=0.18983134; delta=-0.06973629
+202 C_measurement: fixed Brier=0.22973818; recalibrated=0.21205137; delta=-0.01768681
+303 A_reference: fixed Brier=0.18796553; recalibrated=0.18831756; delta=+0.00035203
+303 B_intercept: fixed Brier=0.25079426; recalibrated=0.17990237; delta=-0.07089190
+303 C_measurement: fixed Brier=0.19901516; recalibrated=0.19336419; delta=-0.00565097
+404 A_reference: fixed Brier=0.20518868; recalibrated=0.20985241; delta=+0.00466373
+404 B_intercept: fixed Brier=0.24594450; recalibrated=0.18874813; delta=-0.05719637
+404 C_measurement: fixed Brier=0.21293037; recalibrated=0.19951461; delta=-0.01341576
+505 A_reference: fixed Brier=0.19506421; recalibrated=0.19601535; delta=+0.00095114
+505 B_intercept: fixed Brier=0.25533083; recalibrated=0.18903428; delta=-0.06629654
+505 C_measurement: fixed Brier=0.21791291; recalibrated=0.20474249; delta=-0.01317042
+{
+  "aggregates": [
+    {
+      "site": "A_reference",
+      "primary_delta_brier": {
+        "n": 5,
+        "mean": 0.0014162419626937727,
+        "standard_error": 0.0008360212522856588,
+        "interval95": [
+          -0.0009049251510560743,
+          0.00373740907644362
+        ]
+      },
+      "secondary_seed_means": {
+        "fixed": {
+          "brier": 0.1920165702894267,
+          "auroc": 0.7598507831811867,
+          "average_precision": 0.6692092734328046,
+          "joint_calibration_intercept": -0.03510318863946931,
+          "joint_calibration_slope": 1.0042063834392374
+        },
+        "recalibrated": {
+          "brier": 0.19343281225212045,
+          "auroc": 0.7598507831811867,
+          "average_precision": 0.6692092734328046,
+          "joint_calibration_intercept": -0.1475721226690454,
+          "joint_calibration_slope": 0.9617507600269605
+        },
+        "oracle_diagnostic_only": {
+          "brier": 0.1920165702894267,
+          "auroc": 0.7598507831811867,
+          "average_precision": 0.6692092734328046,
+          "joint_calibration_intercept": -0.03510318863946931,
+          "joint_calibration_slope": 1.0042063834392374
+        }
+      },
+      "subgroup_delta_brier": {
+        "x1_negative": {
+          "n": 5,
+          "mean": 0.001090755532615588,
+          "standard_error": 0.0007193474116420083,
+          "interval95": [
+            -0.0009064730673745683,
+            0.0030879841326057443
+          ]
+        },
+        "x1_nonnegative": {
+          "n": 5,
+          "mean": 0.0018312617580431515,
+          "standard_error": 0.001837854318447204,
+          "interval95": [
+            -0.0032714398684762147,
+            0.006933963384562518
+          ]
+        }
+      }
+    },
+    {
+      "site": "B_intercept",
+      "primary_delta_brier": {
+        "n": 5,
+        "mean": -0.06808869882708812,
+        "standard_error": 0.0031640241417167122,
+        "interval95": [
+          -0.07687343816808515,
+          -0.05930395948609111
+        ]
+      },
+      "secondary_seed_means": {
+        "fixed": {
+          "brier": 0.25471712960092996,
+          "auroc": 0.7552289995009385,
+          "average_precision": 0.8490072746384488,
+          "joint_calibration_intercept": 1.3064673048410713,
+          "joint_calibration_slope": 0.9805493228071249
+        },
+        "recalibrated": {
+          "brier": 0.1866284307738418,
+          "auroc": 0.7552289995009385,
+          "average_precision": 0.8490072746384488,
+          "joint_calibration_intercept": -0.02756221297943463,
+          "joint_calibration_slope": 0.9726691359540249
+        },
+        "oracle_diagnostic_only": {
+          "brier": 0.18462564288712233,
+          "auroc": 0.7552289995009385,
+          "average_precision": 0.8490072746384488,
+          "joint_calibration_intercept": 0.031753185191808954,
+          "joint_calibration_slope": 0.9805493228071247
+        }
+      },
+      "subgroup_delta_brier": {
+        "x1_negative": {
+          "n": 5,
+          "mean": -0.07727165476976869,
+          "standard_error": 0.00409626646844294,
+          "interval95": [
+            -0.08864471375566293,
+            -0.06589859578387444
+          ]
+        },
+        "x1_nonnegative": {
+          "n": 5,
+          "mean": -0.058930879035575,
+          "standard_error": 0.005693877450651706,
+          "interval95": [
+            -0.07473961721303302,
+            -0.043122140858116983
+          ]
+        }
+      }
+    },
+    {
+      "site": "C_measurement",
+      "primary_delta_brier": {
+        "n": 5,
+        "mean": -0.012857064619960284,
+        "standard_error": 0.0019739239948672834,
+        "interval95": [
+          -0.018337556233542027,
+          -0.007376573006378541
+        ]
+      },
+      "secondary_seed_means": {
+        "fixed": {
+          "brier": 0.21551717367232587,
+          "auroc": 0.7359298498146052,
+          "average_precision": 0.6494973583631067,
+          "joint_calibration_intercept": -0.2571757638500013,
+          "joint_calibration_slope": 0.4810014659530003
+        },
+        "recalibrated": {
+          "brier": 0.20266010905236556,
+          "auroc": 0.7359298498146052,
+          "average_precision": 0.6494973583631067,
+          "joint_calibration_intercept": -0.17725892468926313,
+          "joint_calibration_slope": 0.8952332345942097
+        },
+        "oracle_diagnostic_only": {
+          "brier": 0.19634723479961552,
+          "auroc": 0.7478584522565858,
+          "average_precision": 0.6594709058930202,
+          "joint_calibration_intercept": -0.03706855033192121,
+          "joint_calibration_slope": 0.9423014941415794
+        }
+      },
+      "subgroup_delta_brier": {
+        "x1_negative": {
+          "n": 5,
+          "mean": -0.008966369104907083,
+          "standard_error": 0.0040583440129250544,
+          "interval95": [
+            -0.02023413847480162,
+            0.002301400264987454
+          ]
+        },
+        "x1_nonnegative": {
+          "n": 5,
+          "mean": -0.016871837028834324,
+          "standard_error": 0.00388741941217644,
+          "interval95": [
+            -0.027665043627622486,
+            -0.006078630430046163
+          ]
+        }
+      }
+    }
+  ],
+  "runtime_seconds": 0.32488706999720307
+}

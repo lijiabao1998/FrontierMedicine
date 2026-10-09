@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "comparison": "All 15 raw CSVs and results.json byte-identical in same environment; environment runtime and stdout timing excluded. Same scheduled seeds; not new scientific trials.",
+  "checks": [
+    {
+      "artifact": "raw/101_A_reference.csv",
+      "sha256": "e90d8e241ed490740b9b27b45e2cb8a71fc88792429c18f1ad9863a9cace2b48",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/101_B_intercept.csv",
+      "sha256": "308d25975670423d81c3f040e1a396b45875235138c0a8ccf1607eb25ae317a4",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/101_C_measurement.csv",
+      "sha256": "134e0fce614944b906c9260d77a300aeabcced1e348b4f5e2d5462013223055b",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/202_A_reference.csv",
+      "sha256": "eaf6c1c7005800d498f9707b01656f96e1e7e43970741355f389c72d8f1e9dc1",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/202_B_intercept.csv",
+      "sha256": "1b11f493d850995a0911281835570e6dc2c8c5368be95fbb0b6aec4bef71d249",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/202_C_measurement.csv",
+      "sha256": "387684eaa69f189e0594a5b2875580a60df5a130965b376fb7ab837163177063",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/303_A_reference.csv",
+      "sha256": "e6ccaa5a76ab40c3f32e40c1709ec92b94fb727bf588aecc270dbe4dbd7f177c",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/303_B_intercept.csv",
+      "sha256": "3fe6693f6e23ee1ec156ff3c326650b56f1a8adc8d97941e899038d94a95897a",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/303_C_measurement.csv",
+      "sha256": "40f0d9dc02006f8aceb746470556759f91b7aa0c41daa4f029430e2808f25a09",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/404_A_reference.csv",
+      "sha256": "563402559c92d70e9b6ce245c076b721ac6ebb3c50a4cf94d226d034c1c21337",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/404_B_intercept.csv",
+      "sha256": "d51276c5b5605945907b96358ca50dbe1fc96c07a6adb7ad02720abe349801da",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/404_C_measurement.csv",
+      "sha256": "fd9a5faebd3898ad7a2ce8580d0d3fda13a7b61fb8e237d480e13a21ae2eb1bd",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/505_A_reference.csv",
+      "sha256": "e1ab26d5bd9dfb0f097c6ea48264a2b5b6155f785036952f303a39a1692a4dc0",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/505_B_intercept.csv",
+      "sha256": "3e36c9a77dfb34ee5e2976fa61ca29573d9dff0a50370adf890a6d99221d97c2",
+      "replay_exact": true
+    },
+    {
+      "artifact": "raw/505_C_measurement.csv",
+      "sha256": "e768481a3deb341883425f6dcf83197124931ac2c384f31bd5e6c75b5eb10fd1",
+      "replay_exact": true
+    },
+    {
+      "artifact": "results.json",
+      "sha256": "e00a6b95427ebb43b056878e2adc7fbfc03a9be0a14aab15c0e3eef1e83c5949",
+      "replay_exact": true
+    }
+  ]
+}
