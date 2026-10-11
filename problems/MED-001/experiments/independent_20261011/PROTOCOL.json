@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "problem": "MED-001",
+  "source_head": "00a4d7f81b47fd96b2a7e4ce3ca8059676697c97",
+  "scope": "Bounded independent verification of previously unverified subgroup/conditional intervals from existing synthetic CSVs.",
+  "intended_use": "Research arithmetic audit; no disease, patient, decision or treatment target.",
+  "population": "11520 archived fully synthetic Gaussian/Bernoulli rows in three invented sites.",
+  "endpoint": "Paired Brier(recalibrated)-Brier(fixed) on evaluation rows only.",
+  "split": "Each of 15 frozen seed/site CSVs:256 calibration,512 evaluation. x1<0 vs x1>=0.",
+  "definition": "stdlib csv + math.fsum. n/positives exact; Brier means, paired delta mean; SE sqrt(sum((d-mean)^2)/(n-1)/n); group normal critical1.959963984540054. Equal five-seed means and sample SE with t4 critical2.7764451051977987. No pooling; weighted group sums must reproduce full evaluation counts/Brier/delta.",
+  "tolerance": 1e-10,
+  "controls": [
+    {
+      "name": "N_PLUS_ONE",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative",
+        "n"
+      ],
+      "operation": "add",
+      "delta": 1
+    },
+    {
+      "name": "POSITIVES_PLUS_ONE",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative",
+        "positives"
+      ],
+      "operation": "add",
+      "delta": 1
+    },
+    {
+      "name": "FIXED_BRIER_PLUS_1E4",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative",
+        "fixed_brier"
+      ],
+      "operation": "add",
+      "delta": 0.0001
+    },
+    {
+      "name": "RECALIBRATED_BRIER_PLUS_1E4",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative",
+        "recalibrated_brier"
+      ],
+      "operation": "add",
+      "delta": 0.0001
+    },
+    {
+      "name": "DELTA_MEAN_PLUS_1E4",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative",
+        "paired_brier_delta_conditional",
+        "mean"
+      ],
+      "operation": "add",
+      "delta": 0.0001
+    },
+    {
+      "name": "DELTA_SE_PLUS_1E4",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative",
+        "paired_brier_delta_conditional",
+        "standard_error"
+      ],
+      "operation": "add",
+      "delta": 0.0001
+    },
+    {
+      "name": "DELTA_CI_LOWER_MINUS_1E4",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative",
+        "paired_brier_delta_conditional",
+        "interval95",
+        0
+      ],
+      "operation": "add",
+      "delta": -0.0001
+    },
+    {
+      "name": "DELTA_CI_UPPER_PLUS_1E4",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative",
+        "paired_brier_delta_conditional",
+        "interval95",
+        1
+      ],
+      "operation": "add",
+      "delta": 0.0001
+    },
+    {
+      "name": "AGGREGATE_MEAN_PLUS_1E4",
+      "path": [
+        "aggregates",
+        "A_reference",
+        "x1_negative",
+        "mean"
+      ],
+      "operation": "add",
+      "delta": 0.0001
+    },
+    {
+      "name": "AGGREGATE_SE_PLUS_1E4",
+      "path": [
+        "aggregates",
+        "A_reference",
+        "x1_negative",
+        "standard_error"
+      ],
+      "operation": "add",
+      "delta": 0.0001
+    },
+    {
+      "name": "DELETE_SUBGROUP",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative"
+      ],
+      "operation": "delete"
+    },
+    {
+      "name": "NAN_DELTA_MEAN",
+      "path": [
+        "runs",
+        "101_A_reference",
+        "x1_negative",
+        "paired_brier_delta_conditional",
+        "mean"
+      ],
+      "operation": "nan"
+    }
+  ],
+  "aggregate_delta_anchors": [
+    [
+      "A_reference",
+      "x1_negative",
+      0.001090755532615588
+    ],
+    [
+      "A_reference",
+      "x1_nonnegative",
+      0.0018312617580431515
+    ],
+    [
+      "B_intercept",
+      "x1_negative",
+      -0.07727165476976869
+    ],
+    [
+      "B_intercept",
+      "x1_nonnegative",
+      -0.058930879035575
+    ],
+    [
+      "C_measurement",
+      "x1_negative",
+      -0.008966369104907083
+    ],
+    [
+      "C_measurement",
+      "x1_nonnegative",
+      -0.016871837028834324
+    ]
+  ],
+  "acceptance": "All15 raw hashes/header/splits/IDs and11520 rows exact; all30groups+6aggregates numerics within1e-10; group sums consistent; all12 semantic mutants rejected; total verdict fail-closed.",
+  "limits": "Pure synthetic arithmetic only. Conditional row intervals ignore calibration-set variability; five-seed t4 intervals are rough Monte Carlo summaries. No model/DGP regeneration, calibration refit, clinical or real-population fairness evidence; no causal inference or new medical discovery. Nature primary direct open returned Internal Error and PubMed direct open one-line unavailable content; author-hosted abstract and primary scoping-review abstract were read instead. No full-proof/clinical guideline adjudication; noisy searches cannot establish absence of retraction.",
+  "preflight": {
+    "checked_at": "2026-10-11T19:38:22+00:00",
+    "verdict": "PARTIAL_PROGRESS",
+    "queries": [
+      {
+        "category": "general",
+        "query": "medical AI external validation subgroup calibration synthetic site shift 2026",
+        "engine": "web.run search index",
+        "outcome": "Fresh query after official round start; primary readings recorded separately; no full literature adjudication."
+      },
+      {
+        "category": "discipline",
+        "query": "site:nature.com s41591-025-04184-7 scaling medical AI clinical contexts",
+        "engine": "web.run search index",
+        "outcome": "Fresh query after official round start; primary readings recorded separately; no full literature adjudication."
+      },
+      {
+        "category": "solution",
+        "query": "medical AI cross hospital external validation solved clinical utility 2026 guideline trial",
+        "engine": "web.run search index",
+        "outcome": "Fresh query after official round start; primary readings recorded separately; no full literature adjudication."
+      },
+      {
+        "category": "criticism",
+        "query": "scaling medical AI across clinical contexts correction erratum retraction subgroup calibration",
+        "engine": "web.run search index",
+        "outcome": "Fresh query after official round start; primary readings recorded separately; no full literature adjudication."
+      },
+      {
+        "category": "solution",
+        "query": "\"medical AI\" \"subgroup\" \"external validation\" solved independent verification calibration",
+        "engine": "web.run search index",
+        "outcome": "Undated search; mixed/noisy results. No independently verified universal same-scope resolution."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Scaling medical AI across clinical contexts",
+        "url": "https://www.broadinstitute.org/publications/broad1373711",
+        "kind": "primary",
+        "version": "Nature Medicine 2026; accessed2026-10-11",
+        "read_scope": "Author-hosted abstract only",
+        "supports": "Context-dependent evaluation remains distinct from a synthetic arithmetic audit."
+      },
+      {
+        "title": "The current state of demographic subgroup reporting for commercially available AI for radiology",
+        "url": "https://link.springer.com/article/10.1007/s00330-026-12652-y",
+        "kind": "primary",
+        "version": "Published2026-06-12",
+        "read_scope": "Abstract/objective/methods/results/conclusion and limits",
+        "supports": "Original scoping review describes subgroup reporting gaps; no clinical validity inferred for this toy."
+      }
+    ],
+    "limitations": "Pure synthetic arithmetic only. Conditional row intervals ignore calibration-set variability; five-seed t4 intervals are rough Monte Carlo summaries. No model/DGP regeneration, calibration refit, clinical or real-population fairness evidence; no causal inference or new medical discovery. Nature primary direct open returned Internal Error and PubMed direct open one-line unavailable content; author-hosted abstract and primary scoping-review abstract were read instead. No full-proof/clinical guideline adjudication; noisy searches cannot establish absence of retraction.",
+    "scope_comparison": "Broad clinical validation remains open; this is bounded arithmetic replication and verifier controls.",
+    "baseline": "Historical independent review PASS on other metrics expressly excluded subgroup/conditional intervals; six aggregate anchors are inherited expectations, not this round's results.",
+    "sources_read": true,
+    "scope_compared": true,
+    "retractions_checked": true,
+    "licenses_checked": true,
+    "safety_checked": true,
+    "baseline_identified": true,
+    "acceptance_frozen": true
+  },
+  "budget": {
+    "wall_minutes": 30,
+    "usd": 0,
+    "cpu_affinity_count": 1,
+    "concurrency": 1,
+    "preparation_started_at": "2026-10-11T19:26:51+00:00",
+    "preparation_stop_deadline": "2026-10-11T19:56:51+00:00"
+  },
+  "execution": "NOT_RUN"
+}

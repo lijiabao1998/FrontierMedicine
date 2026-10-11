@@ -1,0 +1,142 @@
+{
+  "problems/MED-001/results/independent_20261011/.gitattributes": {
+    "bytes": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/execution.json": {
+    "bytes": 281,
+    "sha256": "72a9e08ede9b352fe86e6a4bab554f4d13806f340f471559c668480daa837989"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/launch.json": {
+    "bytes": 1177,
+    "sha256": "5a11a5bfda1bb237615cfb47e28bb3fd53abb88d54d2bfc1136fd63249a31f21"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/AGGREGATE_MEAN_PLUS_1E4.json": {
+    "bytes": 15813,
+    "sha256": "a1432e56614f5341ac1eb4511d69b9ea06417c9b507168386ed475219dabe045"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/AGGREGATE_SE_PLUS_1E4.json": {
+    "bytes": 15813,
+    "sha256": "bfed5cc811cf7d83998105d06a6fe1a5cf0ce8085656555cb7373182c7092a26"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/DELETE_SUBGROUP.json": {
+    "bytes": 15353,
+    "sha256": "45bf24a6e32727495ad2f63d42e95a315a1b3989d93672ee43d3b56108d7f17b"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/DELTA_CI_LOWER_MINUS_1E4.json": {
+    "bytes": 15813,
+    "sha256": "6efcd328c39d5ccfb6e0c45773ecccda7b61d0669c9305729271f510b9b0b405"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/DELTA_CI_UPPER_PLUS_1E4.json": {
+    "bytes": 15813,
+    "sha256": "8c6ee6cc83f372d66cd813d8b109baed778f2ad7051846d004721df441de93f9"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/DELTA_MEAN_PLUS_1E4.json": {
+    "bytes": 15812,
+    "sha256": "ef350f5a3f789d231ec845c3551972356a81dc497c90f5ea74a1a52ed5b29f25"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/DELTA_SE_PLUS_1E4.json": {
+    "bytes": 15813,
+    "sha256": "70eaacfa7894790e2e870cded8de96d87380f9277fa4d5f61c1f76449345bb31"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/FIXED_BRIER_PLUS_1E4.json": {
+    "bytes": 15813,
+    "sha256": "13134f825f9c50c205df7dbe155d679847f94f41a43a30d51071ff33630dfbdc"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/N_PLUS_ONE.json": {
+    "bytes": 15813,
+    "sha256": "52e2338032a71436f551d909e34c27e927238b91647aee43238b05ced6f34f8c"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/NAN_DELTA_MEAN.json": {
+    "bytes": 15794,
+    "sha256": "29d3e59e3140dd7bfc0a71f4f4de0f3055c4778ca1bdd431b3168ff196162810"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/POSITIVES_PLUS_ONE.json": {
+    "bytes": 15813,
+    "sha256": "b77b6cda044b25a36d2d034a1a7376604938df13593d56f5291cc74957818328"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/mutants/RECALIBRATED_BRIER_PLUS_1E4.json": {
+    "bytes": 15813,
+    "sha256": "41c0f6ab4265fcb1fbd23c686867ba22d6ee8a6e6636436103cc2a7ba92581b2"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/result.json": {
+    "bytes": 27484,
+    "sha256": "185842a7ec032f41e60176f03229615a9e0c8b12d6371c1f4d94daa07a1bba90"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/stderr.txt": {
+    "bytes": 98,
+    "sha256": "8531d820d22f5cdadd3f00c00d592e13c211ecf2ec0fe113c1931848a5ccc97d"
+  },
+  "problems/MED-001/results/independent_20261011/attempt-1/stdout.txt": {
+    "bytes": 1034,
+    "sha256": "c0357b0a80a11fdcdfc7c07f25b47d7b4832e1ccfbb96fee8e792cff1c753fab"
+  },
+  "problems/MED-001/results/independent_20261011/commands/med-admit.json": {
+    "bytes": 528,
+    "sha256": "38d9962d8bd5389377b1eb6ecd9467eb76341c31795041345f95eab5ccf32964"
+  },
+  "problems/MED-001/results/independent_20261011/commands/med-admit.stderr.txt": {
+    "bytes": 98,
+    "sha256": "8531d820d22f5cdadd3f00c00d592e13c211ecf2ec0fe113c1931848a5ccc97d"
+  },
+  "problems/MED-001/results/independent_20261011/commands/med-admit.stdout.txt": {
+    "bytes": 98,
+    "sha256": "d32706599cfee5f07889d6f015e1dfb7ed31dbd196e526a039e31bc97064d132"
+  },
+  "problems/MED-001/results/independent_20261011/commands/med-launch.json": {
+    "bytes": 525,
+    "sha256": "f0fa86bf5e1bb2094aed5e5b3d989fb571ad7902411466a5b061c171f8b5e091"
+  },
+  "problems/MED-001/results/independent_20261011/commands/med-launch.stderr.txt": {
+    "bytes": 98,
+    "sha256": "8531d820d22f5cdadd3f00c00d592e13c211ecf2ec0fe113c1931848a5ccc97d"
+  },
+  "problems/MED-001/results/independent_20261011/commands/med-launch.stdout.txt": {
+    "bytes": 1326,
+    "sha256": "f7e2ebeb0fc7fa3f1350dca6df2fb26f55a2735768b96b93a20c20350b3e9581"
+  },
+  "problems/MED-001/results/independent_20261011/commands/protocol-commit.json": {
+    "bytes": 321,
+    "sha256": "0342a3c3de4bfd8142a945719bb4851c615aa0ea04246f14f34fa653c96445c0"
+  },
+  "problems/MED-001/results/independent_20261011/commands/protocol-commit.stderr.txt": {
+    "bytes": 98,
+    "sha256": "8531d820d22f5cdadd3f00c00d592e13c211ecf2ec0fe113c1931848a5ccc97d"
+  },
+  "problems/MED-001/results/independent_20261011/commands/protocol-commit.stdout.txt": {
+    "bytes": 276,
+    "sha256": "90c83688f1c2f5dc47f5ac5e203d72e79106e378bbcfcea752498cb8ff7ba24d"
+  },
+  "problems/MED-001/results/independent_20261011/commands/seal.json": {
+    "bytes": 310,
+    "sha256": "64b66834ec9797c4629326e2aa20c5ed161e4f71aa98da73cd1ff5f937323951"
+  },
+  "problems/MED-001/results/independent_20261011/commands/seal.stderr.txt": {
+    "bytes": 98,
+    "sha256": "8531d820d22f5cdadd3f00c00d592e13c211ecf2ec0fe113c1931848a5ccc97d"
+  },
+  "problems/MED-001/results/independent_20261011/commands/seal.stdout.txt": {
+    "bytes": 210,
+    "sha256": "53b830272894d59999d97030a46dcfe4293ce4af25fc000b77a64c5e10f3565a"
+  },
+  "problems/MED-001/results/independent_20261011/INDEPENDENT_REVIEW.md": {
+    "bytes": 11333,
+    "sha256": "14764e514462f9526d153e35793a39f0c3c80111d25e55f73af12dfda58273b4"
+  },
+  "problems/MED-001/results/independent_20261011/preparation-failures/PREPARATION_READ_ATTEMPTS.json": {
+    "bytes": 72787,
+    "sha256": "644b8f1f74d297e8bcc66151b5dc23ba4cc15c01264662f0c1cd623e64f678aa"
+  },
+  "problems/MED-001/results/independent_20261011/preparation-failures/prepare-first-failed.json": {
+    "bytes": 319,
+    "sha256": "380b19a8e3ebd79ea92a2d13f0e66fa0d3edb27846c44983233d028b19308ac6"
+  },
+  "problems/MED-001/results/independent_20261011/preparation-failures/prepare-first-failed.stderr.txt": {
+    "bytes": 1086,
+    "sha256": "9dfd9f9759941c40639e58376ebca04c2faa12b0d619e329f9ba39a110a20167"
+  },
+  "problems/MED-001/results/independent_20261011/ROUND_REPORT.md": {
+    "bytes": 2271,
+    "sha256": "8eb18c3eb77ec44932340168d4817077108dd98efa1fe6448bbdb56d3382f563"
+  }
+}
