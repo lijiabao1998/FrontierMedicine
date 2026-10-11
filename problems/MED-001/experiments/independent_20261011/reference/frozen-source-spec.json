@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "research_only": true,
+  "data_origin": "COMPLETELY SYNTHETIC. All DGP parameters invented here, not estimated from patients or copied from clinical papers. No personal data.",
+  "intended_use": "Research-only demonstration of evaluation and recalibration of a fixed binary classifier under invented site shifts; no disease, patient, clinical decision or treatment target.",
+  "population": "Independent synthetic rows from three expressly invented Gaussian/Bernoulli DGPs. Site is a simulation scenario, not a hospital.",
+  "index_time": "Synthetic row generation; no follow-up time, censoring or prognostic horizon.",
+  "outcome_reference": "y is Bernoulli(p_true) from the declared DGP; ground truth is the random draw, with p_true available as simulation oracle only.",
+  "predictors": "x1,x2 independent standard normal; observed x1 may be multiplied by a site-specific scale; x2 may be MCAR missing and imputed to zero. No fitted imputer.",
+  "clinical_decision_point": "NONE. Toy threshold arithmetic has no clinical utility interpretation.",
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "n_calibration": 256,
+  "n_evaluation": 512,
+  "rng": "numpy.random.default_rng(numpy.random.SeedSequence([seed,site_index,split_index])); site order A_reference,B_intercept,C_measurement; split calibration=0,evaluation=1; draw x1 normal, x2 normal, missing uniforms, label uniforms in that order.",
+  "sites": [
+    {
+      "name": "A_reference",
+      "outcome_intercept": -0.5,
+      "x1_scale": 1.0,
+      "x2_missing_probability": 0.0
+    },
+    {
+      "name": "B_intercept",
+      "outcome_intercept": 0.8,
+      "x1_scale": 1.0,
+      "x2_missing_probability": 0.0
+    },
+    {
+      "name": "C_measurement",
+      "outcome_intercept": -0.5,
+      "x1_scale": 2.0,
+      "x2_missing_probability": 0.1
+    }
+  ],
+  "dgp": "p_true = sigmoid(outcome_intercept + x1 - 0.5*x2); y = (u_label < p_true); missing = (u_missing < missing_probability); observed_x1=x1_scale*x1; observed_x2=0 if missing else x2.",
+  "fixed_model": {
+    "intercept": -0.5,
+    "observed_x1_coefficient": 1.0,
+    "observed_x2_coefficient": -0.5,
+    "training": "NONE. Coefficients fixed by design; not trained or selected on any data."
+  },
+  "recalibration": "For each seed/site separately, fit logistic y ~ alpha + beta*fixed_logit using calibration rows ONLY, unpenalized Newton maximum likelihood, start [0,1], maximum 100 iterations, step infinity norm tolerance 1e-10; clip linear predictors to [-35,35] for sigmoid numerical safety. No hyperparameter selection or external model retraining. Updated model results must be labelled separately.",
+  "splits": "Independent RNG streams and unique row IDs across seed/site/split. Evaluation rows never fit calibrator. Source A is an in-DGP synthetic reference; B/C are synthetic shifted scenarios, never genuine clinical external validation.",
+  "primary_estimand": "For each site, mean over five independent repetitions of held-out empirical Brier(recalibrated) minus Brier(fixed), averaging equally over seeds. Negative is lower Brier. Report all 15 paired values, five-seed mean, Monte Carlo standard error and two-sided t(4) 95% interval. No multiplicity-adjusted inference or success claim.",
+  "secondary_metrics": [
+    "Brier",
+    "AUROC with average-rank tie handling",
+    "AUPRC defined as non-interpolated average precision with equal-score groups",
+    "joint logistic calibration intercept and slope on evaluation rows, descriptive ONLY and never applied back to predictions",
+    "10 equal-width-bin reliability counts and mean predictions/outcomes",
+    "toy net benefit TP/n - FP/n*t/(1-t) for t=0.2,0.5,0.8, plus select-all/select-none comparators",
+    "missingness counts",
+    "subgroups x1<0 and x1>=0: per-run Brier and paired Brier difference with conditional normal 95% intervals; also seed-level t(4) intervals for subgroup differences"
+  ],
+  "uncertainty_limits": "Only five repetitions; t intervals are rough Monte Carlo summaries under invented DGP, not clinical confidence or transport guarantees. Conditional row-level subgroup intervals ignore calibration-set variability; aggregate repeated-seed intervals incorporate it approximately. AUROC/AP/calibration coefficient intervals NOT_RUN.",
+  "hypotheses": [
+    "B_intercept recalibration is expected to lower held-out Brier on average, but the observed sign is not an acceptance criterion.",
+    "A_reference recalibration can worsen Brier because of finite calibration sample.",
+    "C_measurement recalibration cannot recover lost information; compare oracle p_true discrimination/Brier as a diagnostic upper-information reference."
+  ],
+  "evaluator": "Author implementation in run_baseline.py. Independent coordinator will check using a distinct implementation and raw CSVs, including direct paired Brier and rank-based metrics. Evaluator cannot be weakened after outputs are inspected.",
+  "required_controls": [
+    "Known y=[0,0,1,1], p=[0.1,0.2,0.8,0.9]: Brier=0.025, AUROC=1, AP=1, net benefit t=.5 = .5.",
+    "Tied p=.5 on balanced labels: AUROC=.5, AP=.5.",
+    "Flipped labels on ordered fixture must yield AUROC=0, Brier=.725.",
+    "Reject duplicate calibration/evaluation row ID before fitting.",
+    "Reject a flipped label against sealed row-data SHA256 manifest.",
+    "Reject changed fixed model coefficients against frozen model SHA256."
+  ],
+  "acceptance": "All finite test metrics and split sizes reported for every scheduled seed/site; known positives exact within 1e-12; leakage, label and model tampering rejected; re-run deterministic outputs; all failures and negative comparisons retained. No scientific improvement threshold. Governance record passes at pinned revision. Independent result verification required before any verified claim.",
+  "not_run": [
+    "real patient data",
+    "clinical external validation",
+    "prospective/shadow/RCT or workflow study",
+    "clinical utility",
+    "treatment or causal effects",
+    "regulatory or deployment assessment",
+    "real protected-group fairness",
+    "large Monte Carlo or sample-size adequacy study",
+    "clinical threshold selection"
+  ],
+  "budget": {
+    "wall_minutes": 30,
+    "usd": 0,
+    "max_trials": 15,
+    "fit_iteration_cap": 100
+  },
+  "frozen_at": "2026-10-09T10:54:57.449598+00:00"
+}

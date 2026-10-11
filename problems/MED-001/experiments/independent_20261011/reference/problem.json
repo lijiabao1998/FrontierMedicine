@@ -1,0 +1,27 @@
+{
+  "id": "MED-001",
+  "domain": "medicine",
+  "title": "醫療AI跨機構／族群 external validation",
+  "status": "OPEN",
+  "priority": "A",
+  "checked_on": "2026-09-28",
+  "statement": "對固定intended use，判定醫療AI在不同hospital、population、device/protocol與prevalence下是否保持calibration、discrimination與clinical usefulness。",
+  "known_result": "2026 Nature Medicine提出scaling medical AI across clinical contexts，強調external validity、local adaptation與context-specific evaluation。",
+  "open_gap": "資料生成流程、site heterogeneity、workflow interaction、transportability與再校準時機。",
+  "first_task": "用公開多site或合成site-shift資料，固定model不重訓，先做site-held-out discrimination+calibration，再測簡單recalibration。",
+  "evaluator": "AUROC/AUPRC、calibration slope/intercept、Brier、decision-curve net benefit、subgroup intervals。",
+  "validation_limits": "external validation失敗不等於模型毫無價值；重新訓練後的test不能再叫原模型external validation。",
+  "completion_criterion": "多個獨立site/time上對intended use保持預先規定性能或有可靠abstention/recalibration策略。",
+  "screening_note": "2026-09-28 初始有界文獻篩查。本庫只做研究方法、公開/去識別資料與simulation，不提供個人診療或自動臨床決策。每輪重查最新指南、驗證研究與修訂。",
+  "screening_queries": [
+    "scaling medical AI across clinical contexts 2026"
+  ],
+  "sources": [
+    {
+      "title": "Scaling medical AI across clinical contexts",
+      "url": "https://www.nature.com/articles/s41591-025-04184-7",
+      "kind": "perspective",
+      "supports": "醫療AI跨臨床context外部驗證與scaling問題"
+    }
+  ]
+}

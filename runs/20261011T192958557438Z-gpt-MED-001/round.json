@@ -1,0 +1,140 @@
+{
+  "round_id": "20261011T192958557438Z-gpt-MED-001",
+  "problem_id": "MED-001",
+  "agent": "gpt",
+  "branch": "gpt/MED-001-subgroup-independent-20261011",
+  "base_sha": "00a4d7f81b47fd96b2a7e4ce3ca8059676697c97",
+  "started_at": "2026-10-11T19:29:58.557438+00:00",
+  "state": "ADMITTED",
+  "acceptance": "Frozen PROTOCOL.json SHA256 34527226a6f4a8c39baa1fc6d3bdba75b5e373467397fc854f397cd63c7280b7. All15 raw hashes/header/splits/IDs and11520 rows exact; all30groups+6aggregates numerics within1e-10; group sums consistent; all12 semantic mutants rejected; total verdict fail-closed.",
+  "not_done": "Pure synthetic arithmetic only. Conditional row intervals ignore calibration-set variability; five-seed t4 intervals are rough Monte Carlo summaries. No model/DGP regeneration, calibration refit, clinical or real-population fairness evidence; no causal inference or new medical discovery. Nature primary direct open returned Internal Error and PubMed direct open one-line unavailable content; author-hosted abstract and primary scoping-review abstract were read instead. No full-proof/clinical guideline adjudication; noisy searches cannot establish absence of retraction.",
+  "budget": {
+    "wall_minutes": 30,
+    "usd": 0,
+    "max_trials": 100,
+    "cpu_affinity_count": 1,
+    "concurrency": 1,
+    "preparation_started_at": "2026-10-11T19:26:51+00:00",
+    "preparation_stop_deadline": "2026-10-11T19:56:51+00:00"
+  },
+  "preflight": {
+    "checked_at": "2026-10-11T19:38:22+00:00",
+    "verdict": "PARTIAL_PROGRESS",
+    "queries": [
+      {
+        "category": "general",
+        "query": "medical AI external validation subgroup calibration synthetic site shift 2026",
+        "engine": "web.run search index",
+        "outcome": "Fresh query after official round start; primary readings recorded separately; no full literature adjudication."
+      },
+      {
+        "category": "discipline",
+        "query": "site:nature.com s41591-025-04184-7 scaling medical AI clinical contexts",
+        "engine": "web.run search index",
+        "outcome": "Fresh query after official round start; primary readings recorded separately; no full literature adjudication."
+      },
+      {
+        "category": "solution",
+        "query": "medical AI cross hospital external validation solved clinical utility 2026 guideline trial",
+        "engine": "web.run search index",
+        "outcome": "Fresh query after official round start; primary readings recorded separately; no full literature adjudication."
+      },
+      {
+        "category": "criticism",
+        "query": "scaling medical AI across clinical contexts correction erratum retraction subgroup calibration",
+        "engine": "web.run search index",
+        "outcome": "Fresh query after official round start; primary readings recorded separately; no full literature adjudication."
+      },
+      {
+        "category": "solution",
+        "query": "\"medical AI\" \"subgroup\" \"external validation\" solved independent verification calibration",
+        "engine": "web.run search index",
+        "outcome": "Undated search; mixed/noisy results. No independently verified universal same-scope resolution."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Scaling medical AI across clinical contexts",
+        "url": "https://www.broadinstitute.org/publications/broad1373711",
+        "kind": "primary",
+        "version": "Nature Medicine 2026; accessed2026-10-11",
+        "read_scope": "Author-hosted abstract only",
+        "supports": "Context-dependent evaluation remains distinct from a synthetic arithmetic audit."
+      },
+      {
+        "title": "The current state of demographic subgroup reporting for commercially available AI for radiology",
+        "url": "https://link.springer.com/article/10.1007/s00330-026-12652-y",
+        "kind": "primary",
+        "version": "Published2026-06-12",
+        "read_scope": "Abstract/objective/methods/results/conclusion and limits",
+        "supports": "Original scoping review describes subgroup reporting gaps; no clinical validity inferred for this toy."
+      }
+    ],
+    "limitations": "Pure synthetic arithmetic only. Conditional row intervals ignore calibration-set variability; five-seed t4 intervals are rough Monte Carlo summaries. No model/DGP regeneration, calibration refit, clinical or real-population fairness evidence; no causal inference or new medical discovery. Nature primary direct open returned Internal Error and PubMed direct open one-line unavailable content; author-hosted abstract and primary scoping-review abstract were read instead. No full-proof/clinical guideline adjudication; noisy searches cannot establish absence of retraction.",
+    "scope_comparison": "Broad clinical validation remains open; this is bounded arithmetic replication and verifier controls.",
+    "baseline": "Historical independent review PASS on other metrics expressly excluded subgroup/conditional intervals; six aggregate anchors are inherited expectations, not this round's results.",
+    "sources_read": true,
+    "scope_compared": true,
+    "retractions_checked": true,
+    "licenses_checked": true,
+    "safety_checked": true,
+    "baseline_identified": true,
+    "acceptance_frozen": true
+  },
+  "artifacts": [
+    "problems/MED-001/experiments/independent_20261011",
+    "problems/MED-001/results/independent_20261011"
+  ],
+  "result": null,
+  "public_claim": {
+    "status": "POSTED_AND_READ_BACK",
+    "url": "https://github.com/lijiabao1998/FrontierMedicine/pull/4#issuecomment-6112950347",
+    "readback_path": "problems/MED-001/experiments/independent_20261011/reference/public-claim-readback.json",
+    "readback_sha256": "b0438cbc2d72d561c504905b5d2bbc22ffae5cd8d9e3447b992383cbf8b81172",
+    "comment_id": 6112950347
+  },
+  "execution": {
+    "status": "NOT_RUN"
+  },
+  "execution_inputs_sha256": {
+    "problems/MED-001/experiments/independent_20261011/.gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "problems/MED-001/experiments/independent_20261011/admission_guard.py": "bdb2e5adc78e3746d3d5969a767ad31e452e97adddf1af2fbed1cb7c4ff3eace",
+    "problems/MED-001/experiments/independent_20261011/common.py": "067138ed5c0c93d22b4ba3a1188e32e60b6e94500477f0b05db9f26080cc976d",
+    "problems/MED-001/experiments/independent_20261011/PROTOCOL.json": "34527226a6f4a8c39baa1fc6d3bdba75b5e373467397fc854f397cd63c7280b7",
+    "problems/MED-001/experiments/independent_20261011/PROTOCOL_REVIEW.json": "e9749ef3dab9553998936514d466b8a16c26d7d927d43f55c02216a91e287c04",
+    "problems/MED-001/experiments/independent_20261011/PROTOCOL_REVIEW.md": "b2f3e9475c7bf259e777295c8de791e3de0e2c46959a81f5c823f82dab0064e8",
+    "problems/MED-001/experiments/independent_20261011/reference/AGENTS.md": "8aad6bb83b5fdb9a212318ddc046688b261757aabfe50b5686c7895042e64c43",
+    "problems/MED-001/experiments/independent_20261011/reference/author-manifest.json": "2a065314ea5515204bc887dea1700bab274f6acc03f1d706d38886984fe88145",
+    "problems/MED-001/experiments/independent_20261011/reference/author-results.json": "e00a6b95427ebb43b056878e2adc7fbfc03a9be0a14aab15c0e3eef1e83c5949",
+    "problems/MED-001/experiments/independent_20261011/reference/author-source.py": "114b6146eeb70400acdea52c8777211af5a43583b6858737b567e189a63d134d",
+    "problems/MED-001/experiments/independent_20261011/reference/FRESH_SOURCE_CHECK.json": "dcaa49ec387a3cecf101bcca5c2b47c6e370357ebe5e829fa75352750fcfab6f",
+    "problems/MED-001/experiments/independent_20261011/reference/frozen-source-spec.json": "cb8e12aad804940aac4f4db855b1a62302f6abc372a9210f9baaf25939e5dfdd",
+    "problems/MED-001/experiments/independent_20261011/reference/GOVERNANCE.lock.json": "f19ba2a40df880a4f3c0808ad32219830a3bff2b769fa666d3bc91e45dd24d8b",
+    "problems/MED-001/experiments/independent_20261011/reference/legacy-independent-review.json": "886fee52b2f41e00a0a70ae2420e226b10c146701fdce2b403e07caadf856e18",
+    "problems/MED-001/experiments/independent_20261011/reference/problem.json": "3e54ad7c5ef4ea91daf7911b95b0566aba4420321fa5871520977baaa5e60759",
+    "problems/MED-001/experiments/independent_20261011/reference/public-claim-readback.json": "b0438cbc2d72d561c504905b5d2bbc22ffae5cd8d9e3447b992383cbf8b81172",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/101_A_reference.csv": "e90d8e241ed490740b9b27b45e2cb8a71fc88792429c18f1ad9863a9cace2b48",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/101_B_intercept.csv": "308d25975670423d81c3f040e1a396b45875235138c0a8ccf1607eb25ae317a4",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/101_C_measurement.csv": "134e0fce614944b906c9260d77a300aeabcced1e348b4f5e2d5462013223055b",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/202_A_reference.csv": "eaf6c1c7005800d498f9707b01656f96e1e7e43970741355f389c72d8f1e9dc1",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/202_B_intercept.csv": "1b11f493d850995a0911281835570e6dc2c8c5368be95fbb0b6aec4bef71d249",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/202_C_measurement.csv": "387684eaa69f189e0594a5b2875580a60df5a130965b376fb7ab837163177063",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/303_A_reference.csv": "e6ccaa5a76ab40c3f32e40c1709ec92b94fb727bf588aecc270dbe4dbd7f177c",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/303_B_intercept.csv": "3fe6693f6e23ee1ec156ff3c326650b56f1a8adc8d97941e899038d94a95897a",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/303_C_measurement.csv": "40f0d9dc02006f8aceb746470556759f91b7aa0c41daa4f029430e2808f25a09",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/404_A_reference.csv": "563402559c92d70e9b6ce245c076b721ac6ebb3c50a4cf94d226d034c1c21337",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/404_B_intercept.csv": "d51276c5b5605945907b96358ca50dbe1fc96c07a6adb7ad02720abe349801da",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/404_C_measurement.csv": "fd9a5faebd3898ad7a2ce8580d0d3fda13a7b61fb8e237d480e13a21ae2eb1bd",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/505_A_reference.csv": "e1ab26d5bd9dfb0f097c6ea48264a2b5b6155f785036952f303a39a1692a4dc0",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/505_B_intercept.csv": "3e36c9a77dfb34ee5e2976fa61ca29573d9dff0a50370adf890a6d99221d97c2",
+    "problems/MED-001/experiments/independent_20261011/reference/raw/505_C_measurement.csv": "e768481a3deb341883425f6dcf83197124931ac2c384f31bd5e6c75b5eb10fd1",
+    "problems/MED-001/experiments/independent_20261011/reference/README.md": "db0ff3bc1838ca08f2d55cff527d02eb319cad9e75f94b7ae11c1f841f07c911",
+    "problems/MED-001/experiments/independent_20261011/reference/STATUS.md": "260afd628bf30017118200468993ac124cf0d133b00ab70a4f6c051962660e1e",
+    "problems/MED-001/experiments/independent_20261011/reference/VALIDATION.md": "711bf93ad1b5c499d71bb3a5130e788dfd4192006d70ae7c2f1342b7a840ae96",
+    "problems/MED-001/experiments/independent_20261011/run_bounded.py": "ca43afe0e3cfda5f615fe2f05f5d3d00782a16999e48e2b5ced8db72fb8e86a6",
+    "problems/MED-001/experiments/independent_20261011/SOURCE_MANIFEST.json": "6834816aac9de0b04be2542a4b269a97075dac331f5bb2b82b2b60eff45b1739",
+    "problems/MED-001/experiments/independent_20261011/verify.py": "117c0c686ad8e70f0e8e355701bc5d2a9ef8bec436433bc519f1f83aefcb7afe",
+    "problems/MED-001/experiments/independent_20261011/WEB_TRACE.json": "facb3e425fb41187c14f048ebb950661811a57c9d3c23408861681ccce94aa66"
+  },
+  "admitted_at": "2026-10-11T19:47:08.553459+00:00"
+}
