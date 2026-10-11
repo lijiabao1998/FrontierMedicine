@@ -1,0 +1,10 @@
+{
+  "finished_at": "2026-10-11T19:47:53.439005+00:00",
+  "wall_seconds": 0.2341776999819558,
+  "child_exit_code": 0,
+  "timed_out": false,
+  "cleanup": {},
+  "result_present": true,
+  "verdict": "INDEPENDENT_SYNTHETIC_SUBGROUP_ARITHMETIC_PASS",
+  "status": "COMPLETED"
+}

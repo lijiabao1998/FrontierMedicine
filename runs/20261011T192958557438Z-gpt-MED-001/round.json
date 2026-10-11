@@ -5,7 +5,7 @@
   "branch": "gpt/MED-001-subgroup-independent-20261011",
   "base_sha": "00a4d7f81b47fd96b2a7e4ce3ca8059676697c97",
   "started_at": "2026-10-11T19:29:58.557438+00:00",
-  "state": "ADMITTED",
+  "state": "FINISHED",
   "acceptance": "Frozen PROTOCOL.json SHA256 34527226a6f4a8c39baa1fc6d3bdba75b5e373467397fc854f397cd63c7280b7. All15 raw hashes/header/splits/IDs and11520 rows exact; all30groups+6aggregates numerics within1e-10; group sums consistent; all12 semantic mutants rejected; total verdict fail-closed.",
   "not_done": "Pure synthetic arithmetic only. Conditional row intervals ignore calibration-set variability; five-seed t4 intervals are rough Monte Carlo summaries. No model/DGP regeneration, calibration refit, clinical or real-population fairness evidence; no causal inference or new medical discovery. Nature primary direct open returned Internal Error and PubMed direct open one-line unavailable content; author-hosted abstract and primary scoping-review abstract were read instead. No full-proof/clinical guideline adjudication; noisy searches cannot establish absence of retraction.",
   "budget": {
@@ -85,7 +85,17 @@
     "problems/MED-001/experiments/independent_20261011",
     "problems/MED-001/results/independent_20261011"
   ],
-  "result": null,
+  "result": {
+    "verdict": "INDEPENDENT_SYNTHETIC_SUBGROUP_ARITHMETIC_PASS",
+    "child_exit_code": 0,
+    "scientific_all_criteria_passed": true,
+    "broad_problem_completion": false,
+    "research_runs": 1,
+    "usd": 0,
+    "summary": "problems/MED-001/results/independent_20261011/attempt-1/result.json",
+    "raw_stdout": "problems/MED-001/results/independent_20261011/attempt-1/stdout.txt",
+    "raw_stderr": "problems/MED-001/results/independent_20261011/attempt-1/stderr.txt"
+  },
   "public_claim": {
     "status": "POSTED_AND_READ_BACK",
     "url": "https://github.com/lijiabao1998/FrontierMedicine/pull/4#issuecomment-6112950347",
@@ -94,7 +104,14 @@
     "comment_id": 6112950347
   },
   "execution": {
-    "status": "NOT_RUN"
+    "finished_at": "2026-10-11T19:47:53.439005+00:00",
+    "wall_seconds": 0.2341776999819558,
+    "child_exit_code": 0,
+    "timed_out": false,
+    "cleanup": {},
+    "result_present": true,
+    "verdict": "INDEPENDENT_SYNTHETIC_SUBGROUP_ARITHMETIC_PASS",
+    "status": "COMPLETED"
   },
   "execution_inputs_sha256": {
     "problems/MED-001/experiments/independent_20261011/.gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
@@ -136,5 +153,7 @@
     "problems/MED-001/experiments/independent_20261011/verify.py": "117c0c686ad8e70f0e8e355701bc5d2a9ef8bec436433bc519f1f83aefcb7afe",
     "problems/MED-001/experiments/independent_20261011/WEB_TRACE.json": "facb3e425fb41187c14f048ebb950661811a57c9d3c23408861681ccce94aa66"
   },
-  "admitted_at": "2026-10-11T19:47:08.553459+00:00"
+  "admitted_at": "2026-10-11T19:47:08.553459+00:00",
+  "finished_at": "2026-10-11T19:47:53.439005+00:00",
+  "independent_review": "Static prelaunch plus final artifact-only review; no reviewer numerical replay."
 }
